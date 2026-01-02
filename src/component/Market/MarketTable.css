@@ -1,0 +1,285 @@
+.orderTable-container {
+  width: 100%;
+}
+
+.vendorOrderTable {
+  margin-left: 20.2rem;
+  margin-top: 4rem;
+  border: 1px solid #334155;
+  width: 93.4rem;
+  color: white;
+  border-collapse: separate; /* Changed from collapse */
+  border-spacing: 0; /* Remove gaps between cells */
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.vendorOrderTable thead tr {
+  background: rgba(51, 65, 85, 0.5);
+}
+
+.vendorOrderTable th {
+  white-space: nowrap;
+  text-align: left;
+  padding: 1rem 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  color: rgba(255, 255, 255, 0.719);
+}
+
+.order-id {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+.vendorOrderTable th.vendor {
+  text-align: left;
+  font-weight: 700;
+}
+.vendorOrderTable th.customer-name {
+  text-align: left;
+  font-weight: 700;
+}
+
+.vendorOrderTable th.product-name {
+  text-align: left;
+  font-weight: 700;
+}
+.vendorOrderTable th.total {
+  text-align: center;
+  font-weight: 700;
+}
+.vendorOrderTable th.status {
+  text-align: center;
+  font-weight: 700;
+}
+.vendorOrderTable th.orderPayment {
+  text-align: center;
+  font-weight: 700;
+}
+.vendorOrderTable th.orderDate {
+  text-align: center;
+  font-weight: 700;
+}
+.vendorOrderTable th.actions {
+  text-align: left;
+  font-weight: 700;
+}
+
+.vendorOrderTable tbody tr {
+  text-align: center;
+}
+
+.vendorOrderTable tbody tr:hover {
+  background: rgba(100, 116, 139, 0.3);
+}
+.vendorOrderTable tbody td {
+  padding: 1rem 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  white-space: nowrap;
+  border-bottom: 1px solid #334155;
+}
+
+.order-id {
+  text-align: left;
+  font-weight: 600;
+}
+.customer {
+  text-align: left;
+  font-weight: 600;
+}
+
+.products-badge {
+  text-align: left;
+  font-weight: 600;
+  color: #94a3b8;
+}
+.status-pending {
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+.status-suspended {
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  background: rgba(139, 92, 246, 0.15);
+  color: #a78bfa;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+.status-rejected {
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+.status-delivered {
+  color: #34d399;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+.status-processing {
+  color: #3b82f6;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.payment-electronics {
+  color: #34d399;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 14px;
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+.payment-automative {
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 14px;
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.payment-books {
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.payment-home  {
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+
+.payment-fashion  {
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    background: rgba(63, 97, 86, 0.733);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+  }
+  
+  
+.payment-toys  {
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    background: rgba(94, 62, 6, 0.15);
+    color: #27dd40;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+  }
+
+  
+.payment-sports  {
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    background: rgba(0, 150, 0, 0.11);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+  }
+
+  
+.payment-beauty  {
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    background: rgba(192, 212, 193, 0.15);
+    color: #b3a88c;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+  }
+
+  
+.payment-software  {
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    background: rgba(70, 107, 150, 0.527);
+    color: #8aa6b9;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+  }
+
+.customer-info {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.orderDate {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.total {
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+}
+
+.item-customer {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}

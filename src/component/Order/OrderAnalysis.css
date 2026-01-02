@@ -1,0 +1,226 @@
+.table-container {
+    width: 93.7rem;
+    height: 45rem;
+    margin-top: 2rem;
+    margin-left: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* ✅ IMPORTANT */
+    gap: 2rem;
+}
+
+.first-table {
+  width: 45rem;
+  height: 39rem;
+  border-radius: 14px;
+  background: rgba(30, 41, 59, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid #334155;
+  box-sizing: border-box;
+  padding: 2rem;
+  display: flex;
+  position: relative;
+}
+
+.second-table {
+  width: 46rem;
+  height: 45rem;
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid #334155;
+  box-sizing: border-box;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.second-table p {
+  color: white;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  position: absolute;
+  left:.1rem;
+  top: -.1%;
+}
+
+.top-products{
+  width:40rem;
+  height: 32rem;
+  gap: 1rem;
+  display: grid;
+  justify-content: start;
+  margin-top: 5rem;
+  position: relative;
+}
+
+.product-item{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: .5rem;
+  width: 39rem;
+  position: relative;
+  border:  1px solid #60a5fa;
+  border-radius: 14px;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
+}
+
+.product-revenue{
+  position: absolute;
+  right: 1rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.product-details{
+  display: grid;
+  gap: .5rem;
+}
+
+.product-name{
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.product-stats{
+  display: flex;
+  gap: 1rem;
+  font-size: .9rem;
+  color: #ccc;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.index {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #60a5fa;
+  width: 2rem;
+  height: 2rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.2);
+}
+.table-title{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 30rem;
+  height: 2rem;
+  position: absolute;
+  top: -12%;
+  text-align: left;
+  font-weight: 700;
+  font-size: 1.25rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+/* second table  */
+
+.recent-activities{
+  width:40rem;
+  height: 35rem;
+  gap: 1rem;
+  display: grid;
+  justify-content: center;
+  margin-top: 3rem;
+  position: relative;
+}
+.activity-item{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: .5rem;
+  width: 40rem;
+  border:  1px solid #60a5fa;
+  border-radius: 14px;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
+}
+
+.activity-meta{
+  display: flex;
+  gap: 1rem;
+}
+.activity-payment{
+  position: absolute;
+  right: 1rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.status-shipped{
+  cursor: pointer;
+  background-color:#3b82f6;
+  padding: .5rem;
+  border: none;
+  border-radius: 14px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  margin-top: .5rem;
+}
+
+.status-processing{
+  background-color:#f59e0b;
+    padding: .5rem;
+    border: none;
+    border-radius: 14px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    margin-top: .5rem;
+  }
+  .activity-icon{
+    width: 2rem;
+    height: 2rem;
+    background-color: #3e6299;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .time{
+    font-size: .9rem;
+    color: #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-span{
+    color:#3e6299 ;
+  }
+
+  .activity-description{
+   padding: .1rem;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 700;
+   color: white;
+
+  }
+
+  .SecondTable-title{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 35rem;
+    height: 2rem;
+    position: absolute;
+    top: -10%;
+    left: -2%;
+    text-align: left;
+    font-weight: 700;
+    font-size: 1.25rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+  }

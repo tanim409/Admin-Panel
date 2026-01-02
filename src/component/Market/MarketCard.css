@@ -1,0 +1,104 @@
+.header {
+  margin-left: 20rem;
+  margin-top: -50.5rem;
+  width: 100%;
+  height: 30rem;
+}
+
+.fp {
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+  font-size: xx-large;
+  font-weight: bolder;
+  margin-left:1.7rem;
+}
+
+.market-card-container {
+  display: grid;
+  margin-top: -23rem;
+  margin-left: 20rem;
+  justify-content: space-evenly;
+  width: 97rem;
+  height: 33rem;
+
+}
+.MarketContainer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  width: 97rem;
+  height: 13rem;
+}
+.pc {
+  display: grid;
+  justify-content: start;
+  align-content: center;
+  padding-left: 2rem;
+  width: 20rem;
+  height: 11.5rem;
+  max-height: 15rem;
+  border-radius: 14px;
+  background: rgba(30, 41, 59, 0.5);  /* more dark */ 
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid #334155;
+  transition: all 0.3s ease;
+  margin-top: 0.6rem;
+  /* background: rgba(255, 255, 255, 0.05); */
+  backdrop-filter: blur(10px);
+
+}
+.pc:hover {
+    transform: translateY(-2px);
+}
+.icon {
+  margin-top: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.icon-trash {
+  margin-top: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: #e98120e5;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-alert {
+  margin-top: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: #b9304e;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-container{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    display: flex;
+    justify-content: start;
+    width: 97rem;
+    height: 13rem;
+    gap: 2rem;
+    
+    margin-left: 1.5rem;
+  }

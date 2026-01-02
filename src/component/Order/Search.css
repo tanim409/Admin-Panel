@@ -1,0 +1,322 @@
+.search-Container {
+    width: 93.3rem;
+    height: 40rem;
+    margin-left: 20.2rem;
+    margin-top: 5rem;
+    background-color: white;
+    border-radius: 14px;
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    gap: 2rem;
+  }
+  
+ 
+   
+  .search-header{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 92rem;
+    height: 5rem;
+    position: absolute;
+    top: 3%;
+  }
+    
+  .search-icon{
+    position: absolute;
+    top: 2.4rem;
+    left: 2rem;
+  }
+   .search-text{
+    margin-left: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: larger;
+   }
+    
+  .buttons{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 1rem;
+     width: 25rem;
+     margin-right: 1rem;
+     margin-top: .2rem;
+     cursor: pointer;
+    
+     
+   }
+
+   .button1{
+    padding: .5rem; 
+    background-color: #3466b1a1;
+    border: none;
+    border-radius: 14px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+   }
+   .button2{
+    padding: .5rem;
+    background-color: #df0b39f1;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+   }
+   .button3{
+    padding: .5rem;
+    background-color: #583aa856;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+   
+   }
+      
+   .all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .1rem;
+    }
+    .all-button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: .3rem;
+    }
+  .input-container {
+    width: 85rem;
+    height: 3rem;
+    background: rgba(51, 65, 85, 0.5);
+    color: white;
+    margin-left: 1.7rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 3rem;
+    gap: 1rem;
+    padding-left: 2.5rem;
+    border: 1px solid #475569;
+    font-size: 1rem;
+    position: absolute;
+    top: 20%;
+    left: 1.4%;
+    outline: none;
+  } 
+  .input-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .date{
+    width: 1.25rem;
+  }
+
+  .trash{
+    width:1.25rem;
+  }
+  .download{
+    width:1rem;
+  }
+
+  .orderStatus-container{
+    display: grid;
+    margin-left: 3rem;
+    margin-top: 3rem;
+  }
+  
+  .orderStatus-container p{
+    margin-bottom: .5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+  }
+
+  .status-button{
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+  }
+
+  .paymentStatus-container{
+    display: grid;
+    margin-left: 3rem;
+    margin-top: -1rem;
+    
+  }
+   
+  .paymentStatus-container p{
+    margin-bottom: .5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+  }
+
+  .status-section{
+    display: grid;
+    justify-content: start;
+    position: absolute;
+    top: 30%;
+    gap: 3rem;
+  }
+
+  .date-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    justify-content: space-between;
+    top:75%;
+    left: 3rem;
+    gap: 1rem;
+    width: 87rem;
+    height:8rem;
+    color: white;
+    background-color: #334155;
+    padding: .5rem;
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 14px;
+  }
+
+  .from-date, .to-date{
+    display: grid;
+    flex-direction: column;
+    gap: 0rem;
+    width: 50rem;
+
+  }
+
+  .from-date,.to-date p{
+    margin-bottom: .5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .placeholderInfo{
+    height: 3rem;
+    background: rgba(51, 65, 85, 0.5);
+    color: white;
+    border-radius: 10px;
+    /* display: flex;
+    justify-content: start;
+    align-items: center; */
+    padding-left: 0rem;
+    gap: 1rem;
+    border: 1px solid #475569;
+    font-size: 1rem;
+    outline: none;
+   }
+    
+   .placeholderInfo::placeholder{
+    padding-left: 1rem;
+   }
+   .allOrders{
+    background:#64748b;
+    padding: .5rem;
+    border: none;
+    border-radius: 14px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+   }
+   
+   .processing{
+    background-color:#f59e0b;
+    padding: .5rem;
+    border: none;
+    border-radius: 14px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+   }
+   .pending{
+    background-color:#ca8a04;
+    cursor: pointer;
+    padding: .5rem;
+    border: none;
+    border-radius: 14px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+   }
+
+   .shipped{
+    cursor: pointer;
+    background-color:#3b82f6;
+    padding: .5rem;
+    border: none;
+    border-radius: 14px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+   }
+
+   .delivered{
+    cursor: pointer;
+    background-color:#10b981;
+    padding: .5rem;
+    border: none;
+    border-radius: 14px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+   }
+
+   .payment{
+    cursor: pointer;
+    background:  #64748b;
+    padding: .5rem;
+    border: none;
+    border-radius: 14px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+   }
+   .paid{
+    cursor: pointer;
+    background:#10b981;
+    width: 5rem;
+    border: none;
+    border-radius: 14px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+   }
+   .failed{
+    cursor: pointer;
+    background:#dc2626;
+    padding: .5rem;
+    border: none;
+    border-radius: 14px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+   }
+   .refund{
+    cursor: pointer;
+    background: #0891b2;
+    padding: .5rem;
+    border: none;
+    border-radius: 14px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+   }

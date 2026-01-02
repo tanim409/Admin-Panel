@@ -1,0 +1,9 @@
+.charts{
+    display: flex;
+    justify-content: start;
+    align-content: center;
+    width: 100%;
+    gap : 13rem;
+    margin-left: 20rem;
+    margin-top: 10rem;
+}

@@ -1,0 +1,344 @@
+:root {
+  background-color:rgba(28, 40, 61, 0.979);
+}
+.dashboard {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px;
+  margin: 1rem 1rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 14px;
+  height: 3rem;
+  color: white;
+  max-width: 100%;
+  flex-shrink: 0;
+  background: rgba(30, 41, 59, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid #334155;
+  
+}
+
+.tally {
+  font-size: 1.2rem;
+  color: white;
+  background: rgba(30, 41, 59, 0.5);
+  padding-left: 4rem;
+  flex-shrink: 0;
+}
+
+.useP {
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  background: rgba(30, 41, 59, 0.5);
+  margin-left: 0.5rem;
+  flex-shrink: 0;
+}
+.dashboard h1 {
+  font-size: 1.3rem;
+  color: white;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.dashboard1 {
+  display: inline-block;
+  margin-top:.5rem;
+  margin-left: 1rem;
+  padding-left: 1rem;
+  max-width: 300px;
+  width: 200px;
+  background: rgba(30, 41, 59, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid #334155;
+  color: white;
+  height: 50rem;
+  border-radius: 14px;
+  position: sticky;
+}
+
+.user {
+  font-size: 1.2rem;
+  color: #2C3044;
+  background-color: white;
+  display: flex;
+  margin-left: 95rem;
+  gap: 100rem;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.footer-dash {
+  margin-top: 5rem;
+  font-size: 1.1rem;
+  
+}
+.footer-dash P{
+ font-size: small;
+ margin-top: 2rem;
+ color: rgb(105, 121, 121);
+ font-weight: 700;
+}
+.footer-dash1 {
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.1rem;
+}
+.icon-text{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin-top: 1.5rem;
+  font-weight: 700;
+  font-size: medium;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(216, 199, 199);
+}
+.icon-text a{
+  border-bottom: none;
+  text-decoration: none;
+  color: rgb(216, 199, 199);
+}
+
+.inner-dash{
+  margin-top: 2rem;
+  font-size:1.1rem;
+}
+.inner-dash P{
+ font-size: small;
+ margin-top: 2rem;
+ color: rgb(105, 121, 121);
+ font-weight: 700;
+}
+/* }
+
+.user-container{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin-top: -50rem;
+  margin-left: 20rem;
+  max-width: 100rem;
+  width: 90rem;
+  height: 50rem;
+  border-radius: 14px;
+  border: black;
+  background-color: #1d2236;
+}
+
+.sub-user-container{
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  text-align: center;
+  width: 90rem;
+  height: 10rem;
+ 
+ }
+
+.user-container1{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin-top: 1.5rem;
+  width: 17rem;
+  height: 7rem;
+  border-radius: 14px;
+  border: black;
+  background-color: #2C3044;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+.user-container1:hover{
+  transform: translateY(-2px);
+}
+
+.user-container2:hover{
+  transform: translateY(-2px);
+}
+
+.user-container3:hover{
+  transform: translateY(-2px);
+}
+
+.user-container4:hover{
+  transform: translateY(-2px);
+}
+
+.user-container2{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin-top: 1.5rem;
+  width: 17rem;
+  height: 7rem;
+  border-radius: 14px;
+  border: black;
+  background-color:#2C3044;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+}
+.user-container3{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin-top: 1.5rem;
+  width: 17rem;
+  height: 7rem;
+  border-radius: 14px;
+  border: black;
+  background-color:#2C3044;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+} 
+
+
+
+
+.user-container4{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin-top: 1.5rem;
+  width: 17rem;
+  height: 7rem;
+  border-radius: 14px;
+  border: black;
+  background-color:#2C3044;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+} 
+
+.chart-container{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 1rem;
+  width: 80rem;
+  height: 30rem;
+  margin-left: 5rem;
+  margin-bottom: 2rem;
+  background-color: #2C3044;
+  border-radius: 14px;
+  color: white;
+}
+
+.para{
+  display: flex;
+  justify-content: start;
+  margin-left: 2rem ;
+  margin-top: 2rem;
+  color: rgb(136, 132, 132);
+  font-style : normal;
+  font-size: larger;
+  font-weight: 700;
+}
+
+.sub-userCon P{
+
+ font-size: 1.2rem;
+ text-align: left;
+ padding-left: 6px;
+}
+ 
+.info-container{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  margin-top: -.5rem;
+  margin-right: 7rem;
+  height: 2rem;
+  width: 100%;
+} 
+.chart{
+  width:80rem;
+  padding: 10px;
+}
+.asia {
+  color: rgb(150, 133, 39);
+  text-transform: uppercase;
+}
+.euro{
+  color:rgb(27, 4, 70);
+  text-transform: uppercase;
+}
+.all-region{
+  color: rgb(248, 117, 117);
+  text-transform: uppercase;
+}
+.all-user{
+  color: rgb(170, 156, 156);
+  text-transform: uppercase;
+}
+.n1{
+  color:rgb(170, 156, 156);
+  font-weight: bold;
+} 
+.n2{
+  color: rgb(150, 133, 39);
+  font-weight: bold;
+} 
+.n3{
+  color:rgb(27, 4, 70);
+  font-weight: bold;
+} 
+.n4{
+  color: rgb(248, 117, 117);
+  font-weight: bold;
+}  */
+
+/* Home container */
+
+.home-container{
+  width: 97.88rem;
+  margin-top: -50rem;
+  margin-left: 20rem;
+  height : 10rem;
+  background: rgba(84, 101, 129, 0.527);
+  border-radius: 18px;
+  display: grid;
+  justify-content: start;
+}
+
+.inner1{
+  font-size: 2rem;
+  padding-left: 5rem;
+  color : rgb(230, 228, 219);
+  font-weight: 700;
+}
+.inner2{
+  color: rgb(119, 114, 108);
+  margin-top: -3rem;
+  font-size: small;
+}
+
+.bell-container{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: .5rem;
+}
+.bell-container p{
+  animation: animate 1s infinite alternate;
+}
+
+@keyframes animate{
+  from { opacity: .5; }
+  to { opacity: 1; }
+}
+
+.bell{
+  color: rgb(119, 114, 108);
+  margin-top: -3rem;
+}

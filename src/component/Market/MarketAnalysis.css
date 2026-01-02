@@ -1,0 +1,635 @@
+.analysis-container1 {
+  width: 93.7rem;
+  height: 45rem;
+  margin-top: 2rem;
+  margin-left: 21rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* ✅ IMPORTANT */
+  gap: 2rem;
+}
+
+.region-sales {
+  width: 51rem;
+  height: 25rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid #334155;
+  padding: 2rem;
+  display: flex;
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.category-sales {
+  width: 40rem;
+  height: 29rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid #334155;
+  box-sizing: border-box;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.region-sales-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  gap: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.region-sales-data {
+  display: grid;
+  align-items: center;
+  color: white;
+}
+
+.sales-customers {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  margin-top: -0.5rem;
+}
+
+.region-sales-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  margin-left: 0.3rem;
+}
+
+.region-name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.progress-bar {
+  width: 45rem;
+  height: 0.5rem;
+  background-color: #475569;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
+
+.percentage-text {
+  margin-left: 46rem;
+  margin-top: -2.1rem;
+}
+
+.category-sales-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  gap: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  top: 8%;
+  left: 6%;
+}
+
+.category-sales-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 32rem;
+  margin-left: -2rem;
+}
+
+.empty-box {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 14px;
+}
+
+.percentage {
+  color: #94a3b8;
+  font-size: 0.875rem;
+}
+
+.category-sales-amount {
+  display: inline-flex;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.dollar-sign {
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-top: 0.1rem;
+  margin-right: -0.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.chartContainer {
+  width: 93.7rem;
+  height: 30rem;
+  margin-top: -12rem;
+  margin-left: 20.7rem;
+  gap: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ageDemographics {
+  width: 46rem;
+  height: 25rem;
+  border-radius: 14px;
+  background: rgba(30, 41, 59, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid #334155;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-top: -1.88rem;
+  padding: 1rem;
+}
+
+.ageDemographics-card {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  font-size: 1.2rem;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.userIcon {
+  width: 2rem;
+  height: 1.3rem;
+}
+
+.lineChart {
+  width: 46rem;
+  height: 29rem;
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid #334155;
+}
+
+.lineChart p {
+  color: white;
+  font-size: 1.2rem;
+  text-align: left;
+  margin-left: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ageDemographics-data {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 1.9rem;
+  color: white;
+}
+.ageDemographics-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40rem;
+  margin-left: -2rem;
+  margin-top: rem;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.age-stats {
+  display: inline-flex;
+  gap: 1rem;
+}
+.age-percentage {
+  color: #3b82f6;
+  font-size: 0.875rem;
+}
+
+.age-count {
+  color: #94a3b8;
+  font-size: 0.875rem;
+}
+
+.age-group {
+  font-weight: 550;
+}
+
+.VendorChartContainer {
+  width: 93.7rem;
+  height: 30rem;
+  margin-top: 2rem;
+  margin-left: 20.7rem;
+  gap: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.vendor-sales-data {
+  display: grid;
+  align-items: center;
+  color: white;
+  width: 100%;
+  margin-top: -1rem;
+  /* Ensure it uses full width */
+  /* Spacing between items */
+}
+.VendorSalesWrapper {
+  display: grid;
+  margin-top: -1rem;
+}
+
+.salesByVendor {
+  width: 46rem;
+  height: 25rem;
+  border-radius: 14px;
+  /* background: rgba(30, 41, 59, 0.5); */
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid #334155;
+  display: grid;
+  padding: 1.5rem;
+  justify-items: start; /* 👈 KEY LINE */
+  align-items: start;
+}
+
+.salesByVendor-header {
+  color: white;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  justify-content: start;
+  align-content: start;
+  gap: 1rem;
+  width: 42rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid white;
+}
+.vendor-text {
+  font-size: small;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 550;
+  color: #90a3be;
+}
+
+.VendorProgress-bar {
+  width: 42rem;
+  height: 0.5rem;
+  background-color: #475569;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
+
+.sale-text {
+  margin-left: 22.8rem;
+  margin-top: 2rem;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 750;
+  font-size: 1rem;
+}
+
+.vendor-sales-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0rem;
+  margin-left: 0.3rem;
+  gap: 2rem;
+  /* Scroll properties */
+  max-height: 18rem; /* Adjusted to fit within container */
+  overflow-y: auto;
+  width: 100%; /* Ensure it takes full width */
+  padding-right: 0.5rem; /* Space for scrollbar */
+}
+
+/* Optional: Custom scrollbar styling */
+.vendor-sales-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.vendor-sales-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.vendor-sales-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.vendor-sales-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.category-sales-content {
+  display: grid;
+  gap: 1.5rem;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  max-height: 18rem; /* Adjusted to fit within container */
+  overflow-y: auto;
+  width: 100%; /* Ensure it takes full width */
+  padding-right: 0.5rem;
+}
+
+.category-sales-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.category-sales-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.category-sales-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.category-sales-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+.category-sales-wrapper {
+  margin-top: 1rem;
+  margin-left: 2.5rem;
+  display: grid;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+}
+
+.category-info-wrapper {
+  /* display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 10rem;
+    background-color: #334155;
+    margin-left: -10rem; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  flex: 1; /* এটি বাকি সব জায়গা নেবে */
+  min-width: 0;
+}
+.category-info {
+  display: grid;
+  gap: 0.3rem;
+  justify-content: start;
+}
+
+.vendor-name {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-left: -0.4rem;
+}
+
+.VendorIndex {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #60a5fa;
+  width: 2rem;
+  height: 2rem;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: 2rem;
+  margin-left: 0.5rem;
+}
+.eco-products {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: medium;
+  margin-top: 2.8rem;
+}
+
+.VendorProgress-fill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+  background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+}
+
+.categorySalesTrend {
+  width: 46rem;
+  height: 25rem;
+  border-radius: 14px;
+  /* background: rgba(30, 41, 59, 0.5); */
+  background: rgba(255, 255, 255, 0.05);
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid #334155;
+  display: grid;
+  padding: 1.5rem;
+  justify-items: start; /* 👈 KEY LINE */
+  align-items: start;
+}
+.CategoryProgress-bar {
+  width: 98%;
+  height: 0.5rem;
+  background-color: #475569;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+.CategoryProgress-fill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+}
+.CategorySales-name {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.index-category {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  width: 15rem;
+
+  gap: 0.5rem;
+}
+.revenueText {
+  margin-left: 22rem;
+  margin-top: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 750;
+  font-size: 1rem;
+}
+
+.grid-container {
+  display: flex;
+  justify-content: start;
+  gap: 0.5rem;
+  margin-top: -0.5rem;
+  color: #90a3be;
+}
+
+.eco-product {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: medium;
+}
+
+.commisionTrend {
+  width: 93.5rem;
+  height: 39rem;
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid #334155;
+  margin-left: 20.5rem;
+  margin-top: 2rem;
+}
+.commisionTrend p {
+  color: white;
+  font-size: 1.2rem;
+  text-align: left;
+  margin-left: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.commission-container {
+  width: 46rem;
+  height: 27rem;
+  border-radius: 14px;
+  background: rgba(30, 41, 59, 0.5);
+
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid #334155;
+  display: grid;
+  padding: 1.5rem;
+  justify-items: start; /* 👈 KEY LINE */
+  align-items: start;
+  margin-left: 20.5rem;
+  margin-top: 2rem;
+}
+.commission-data {
+  display: grid;
+  justify-content: start;
+  align-items: center;
+}
+
+.commission-header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: grid;
+  gap: 1rem;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  width: 44rem;
+  border-bottom: 1px solid;
+}
+.data-container {
+  display: grid;
+  gap: 1.25rem;
+  padding-top: 2rem;
+  
+}
+.chart-category {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  border: 1px solid #60a5fa;
+  border-radius: 14px;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
+  padding: .5rem;
+}
+.TotalCategories {
+  display: grid;
+  justify-content: start;
+  align-items: center;
+  gap: .5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.ChartColumnIcon {
+  width: 3rem;
+  height: 3rem;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ChartLineIcon {
+  width: 3rem;
+  height: 3rem;
+  background-color: #58729c;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ChartAwardIcon {
+  width: 3rem;
+  height: 3rem;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e98120e5;
+
+}
+
+.ChartGemIcon {
+  width: 3rem;
+  height: 3rem;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b9304e;
+}
+
+
+

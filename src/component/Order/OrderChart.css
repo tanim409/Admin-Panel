@@ -1,0 +1,49 @@
+.chart_container{
+    width:93.7rem;
+    height:30rem;
+    margin-top: 2rem;
+    margin-left: 20rem;
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pie-chart{
+    width:45rem;
+    height:29rem;
+    border-radius: 14px;
+    background: rgba(30, 41, 59, 0.5);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.pie-chart p{
+    color: white;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    margin-left: -9rem;
+    margin-top: -.1rem;
+   
+}
+.line-chart{
+    width:46rem;
+    height:29rem;
+    background: rgba(30, 41, 59, 0.5);
+    border-radius: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
+   
+}
+
+.line-chart p{
+    color: white;
+    font-size: 1.2rem;
+    text-align: left;
+    margin-left: 1rem;
+   font-family: Arial, Helvetica, sans-serif;
+}

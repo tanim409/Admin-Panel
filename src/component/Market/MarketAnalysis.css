@@ -233,6 +233,7 @@
   font-weight: 550;
 }
 
+
 .VendorChartContainer {
   width: 93.7rem;
   height: 30rem;
@@ -477,6 +478,7 @@
   font-size: 0.8rem;
   font-weight: 700;
 }
+
 .index-category {
   display: flex;
   justify-content: start;
@@ -532,8 +534,6 @@
   height: 27rem;
   border-radius: 14px;
   background: rgba(30, 41, 59, 0.5);
-
-
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   border: 1px solid #334155;
   display: grid;

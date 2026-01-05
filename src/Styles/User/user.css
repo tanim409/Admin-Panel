@@ -1,5 +1,6 @@
 .header {
   margin-left: 20rem;
+
   margin-top: -50.5rem;
   width: 100%;
   height: 30rem;
@@ -36,7 +37,12 @@
   height: 11.5rem;
   max-height: 15rem;
   border-radius: 14px;
-  background: rgba(30, 41, 59, 0.5);   /* more dark 
+  background: rgba(
+    30,
+    41,
+    59,
+    0.5
+  ); /* more dark 
   /* background: rgba(255, 255, 255, 0.05); */
 
   backdrop-filter: blur(10px);
@@ -116,7 +122,6 @@
   margin-top: -2rem;
   font-weight: 700;
 }
-
 
 .searchContainer {
   width: 93.3rem;

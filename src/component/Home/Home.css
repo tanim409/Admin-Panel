@@ -1,0 +1,52 @@
+  .home-container-wrapper{
+   display: flex;
+  }
+  .second-section{
+    margin-top: -52rem;
+  }
+.home-container{
+    width: 97.88rem;
+    margin-top: 2rem;
+    margin-left: 20rem;
+    height : 10rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 18px;
+    display: grid;
+    justify-content: start;
+  }
+
+  
+  .inner1{
+    font-size: 2rem;
+    padding-left: 5rem;
+    color : rgb(230, 228, 219);
+    font-weight: 700;
+  }
+  .inner2{
+    color: rgb(155, 149, 141);
+    margin-top: -3rem;
+    font-size: small;
+  }
+  
+  .bell-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: .5rem;
+    margin-left: 5rem;
+  }
+  .bell-container p{
+    animation: animate 1s infinite alternate;
+  }
+  
+  @keyframes animate{
+    from { opacity: .5; }
+    to { opacity: 1; }
+  }
+  
+  .bell{
+    color: rgb(155, 151, 146);
+    margin-top: -3rem;
+    
+  }
+  

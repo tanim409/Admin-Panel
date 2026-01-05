@@ -1,5 +1,5 @@
 import "./MarketCard.css";
-import { DollarSign, Users, UserCheck, Activity } from "lucide-react";
+import { BadgeDollarSign,CircleSlash2,Building,DollarSign,Hourglass,Users, UserCheck, Activity } from "lucide-react";
 export default function MarketCard() {
   return (
     <>
@@ -12,7 +12,7 @@ export default function MarketCard() {
           {/* First Card */}
           <div className="pc">
             <div className="icon">
-              <Users />
+              <BadgeDollarSign  />
             </div>
             <p className="product">Total Sales</p>
             <div className="text">
@@ -34,7 +34,7 @@ export default function MarketCard() {
           {/* Third Card */}
           <div className="pc">
             <div className="icon-alert">
-              <Activity />
+              <CircleSlash2  />
             </div>
             <p className="pro">Avg Order Value</p>
             <div className="text">
@@ -58,7 +58,7 @@ export default function MarketCard() {
         <div className="second-container">
           <div className="pc">
             <div className="icon-alert">
-              <Activity />
+              <Building  />
             </div>
             <p className="pro">Total Vendor</p>
             <div className="text">
@@ -67,7 +67,7 @@ export default function MarketCard() {
           </div>
           <div className="pc">
             <div className="icon-alert">
-              <Activity />
+              <DollarSign />
             </div>
             <p className="pro">Commission Earned</p>
             <div className="text">
@@ -76,7 +76,7 @@ export default function MarketCard() {
           </div>
           <div className="pc">
             <div className="icon-alert">
-              <Activity />
+              <Hourglass/>
             </div>
             <p className="pro">Pending Approvals</p>
             <div className="text">

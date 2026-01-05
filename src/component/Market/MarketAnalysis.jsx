@@ -113,7 +113,7 @@ export default function MarketAnalysis() {
         <div className="salesByVendor">
           <div className="salesByVendor-header">
             Top 10 Vendors By Sales
-            <div className="vendor-text"> Total revenue generated</div>
+            <div className="vendor-text"> Total sales</div>
           </div>
 
           <div className="vendor-sales-content">

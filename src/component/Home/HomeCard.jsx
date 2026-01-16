@@ -125,19 +125,19 @@ export default function HomeCard() {
             <ProgressCircle percentage={90}/>
           </div>
           <div className="profit-data-wrapper">
-            <div className="data-container">
+            <div className="DataContainer">
               <div className="data-content-wrapper">
                 <div>Total Revenue</div>
                 <div className="revenue-text"  style={{color: '#34d399'}}>$1500000</div>
               </div>
             </div>
-            <div className="data-container">
+            <div className="DataContainer">
             <div className="data-content-wrapper">
                 <div>Total Expense</div>
                 <div className="revenue-text" style={{color: '#fbbf24'}}>$3200000</div>
              </div>
             </div>
-            <div className="data-container">
+            <div className="DataContainer">
             <div className="data-content-wrapper">
                 <div>Net Profit</div>
                 <div className="revenue-text" style={{color: '#f87171'}}>- $1700000</div>

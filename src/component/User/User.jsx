@@ -1,4 +1,4 @@
-import "../../Styles/User/user.css";
+import "./User.css";
 import {
   Users,
   UserCheck,
@@ -14,138 +14,134 @@ import {
   MapPin,
   Clock,
   DollarSign,
+  X,
 } from "lucide-react";
+
+import "./Email.css";
+import emailjs from "@emailjs/browser";
+
+import { user_data } from "./UserData";
+import { useEffect, useState } from "react";
+import Email from "./Email";
 export default function User() {
-  const database = [
-    {
-      id: 1,
-      name: "John Doe",
-      email: "john@example.com",
-      role: "Admin",
-      status: "Active",
-      verified: true,
-      subscription: "Premium",
-      location: "New York, USA",
-      registered: "2024-01-15",
-      lastActive: "2 hours ago",
-      totalSpent: 1250,
-      age: 32,
-      gender: "Male",
-      activityScore: 95,
-    },
-    {
-      id: 2,
-      name: "Sarah Smith",
-      email: "sarah@example.com",
-      role: "Manager",
-      status: "Active",
-      verified: true,
-      subscription: "Premium",
-      location: "London, UK",
-      registered: "2024-02-20",
-      lastActive: "5 hours ago",
-      totalSpent: 890,
-      age: 28,
-      gender: "Female",
-      activityScore: 88,
-    },
-    {
-      id: 3,
-      name: "Mike Johnson",
-      email: "mike@example.com",
-      role: "Customer",
-      status: "Active",
-      verified: false,
-      subscription: "Free",
-      location: "Toronto, Canada",
-      registered: "2024-03-10",
-      lastActive: "1 day ago",
-      totalSpent: 450,
-      age: 35,
-      gender: "Male",
-      activityScore: 72,
-    },
-    {
-      id: 4,
-      name: "Emily Davis",
-      email: "emily@example.com",
-      role: "Customer",
-      status: "Inactive",
-      verified: true,
-      subscription: "Trial",
-      location: "Sydney, Australia",
-      registered: "2024-04-05",
-      lastActive: "1 week ago",
-      totalSpent: 120,
-      age: 24,
-      gender: "Female",
-      activityScore: 45,
-    },
-    {
-      id: 5,
-      name: "David Wilson",
-      email: "david@example.com",
-      role: "Customer",
-      status: "Banned",
-      verified: true,
-      subscription: "Free",
-      location: "Berlin, Germany",
-      registered: "2024-05-12",
-      lastActive: "2 weeks ago",
-      totalSpent: 0,
-      age: 41,
-      gender: "Male",
-      activityScore: 12,
-    },
-    {
-      id: 6,
-      name: "Lisa Anderson",
-      email: "lisa@example.com",
-      role: "Manager",
-      status: "Active",
-      verified: true,
-      subscription: "Premium",
-      location: "Tokyo, Japan",
-      registered: "2024-06-18",
-      lastActive: "3 hours ago",
-      totalSpent: 2100,
-      age: 29,
-      gender: "Female",
-      activityScore: 92,
-    },
-    {
-      id: 7,
-      name: "Tom Brown",
-      email: "tom@example.com",
-      role: "Customer",
-      status: "Active",
-      verified: false,
-      subscription: "Free",
-      location: "Paris, France",
-      registered: "2024-07-22",
-      lastActive: "6 hours ago",
-      totalSpent: 320,
-      age: 38,
-      gender: "Male",
-      activityScore: 68,
-    },
-    {
-      id: 8,
-      name: "Anna Martinez",
-      email: "anna@example.com",
-      role: "Customer",
-      status: "Active",
-      verified: true,
-      subscription: "Premium",
-      location: "Madrid, Spain",
-      registered: "2024-08-30",
-      lastActive: "1 hour ago",
-      totalSpent: 1540,
-      age: 27,
-      gender: "Female",
-      activityScore: 85,
-    },
-  ];
+  const [search, setSearch] = useState("");
+  const [selectRole, setSelectRole] = useState("All");
+  const [selectStatus,setSelectStatus] = useState("All");
+  const [selectSubscription, setSelectSubscription] = useState("All");
+
+  const [userData, setDataBase] = useState(() => {
+    const saveData = localStorage.getItem("userData");
+    return saveData ? JSON.parse(saveData) : user_data;
+  });
+  const [selectedUser, setSelectedUser] = useState(null);
+  const [showModel, setShowModel] = useState(false);
+  const [showEmail, setShowEmail] = useState(false);
+
+  const [formData, setFormData] = useState({
+    from_name: "",
+    from_email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const serviceId = "service_qn8wb6d";
+    const templateId = "template_knu7h8c";
+    const publicKey = "wmfaLuIEnDJ9JEUP6";
+
+    emailjs
+      .send(serviceId, templateId, formData, publicKey)
+      .then((Response) => {
+        alert("email sent successfully");
+        setFormData({
+          from_name: "",
+          from_email: "",
+          message: "",
+        });
+      });
+  };
+
+  const handleData = (Id) => {
+    if (window.confirm(`Are you sure you want to delete ?`)) {
+      setDataBase(userData.filter((order) => order.id != Id));
+    }
+  };
+
+  const handleBanUser = (Id) => {
+    if (window.confirm(`Are you sure you want to ban the user ?`)) {
+      setDataBase((Data) =>
+        Data.map((user) =>
+          user.id === Id ? { ...user, status: "Banned" } : user
+        )
+      );
+    }
+  };
+
+  const exportToCSV = () => {
+    const headers = [
+      "UserName",
+      "Email",
+      "Role",
+      "Status",
+      "Subscription",
+      "Location",
+      "Registered",
+      "Last Active",
+      "Total spent",
+    ];
+    const rows = userData.map((u) => [
+      u.name,
+      u.email,
+      u.role,
+      u.subscription,
+      u.location,
+      u.status,
+      u.registered,
+      u.lastActive,
+      u.totalSpent,
+    ]);
+    const csv = [headers, ...rows].map((row) => row.join(",")).join("\n");
+    const blob = new Blob([csv], { type: "text/csv" });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "User Data";
+    a.click();
+  };
+
+
+  useEffect(() => {
+    localStorage.setItem("userData", JSON.stringify(userData));
+  }, [userData]);
+
+  const totalUser = 30;
+  const activeUser = userData.filter((u) => u.status === "Active").length;
+  const newUser = userData.filter(
+    (u) => new Date(u.registered) > new Date("2023-12-31")
+  ).length;
+  const growthOfUser = ((newUser / totalUser) * 100).toFixed(1);
+
+
+  const filterdProducts = userData.filter((p) => {
+    const matchSearch = p.name.toLowerCase().includes(search.toLowerCase());
+    const matchRole = selectRole === "All" || p.role === selectRole;
+    const matchStatus = selectStatus === "All" || p.status === selectStatus;
+    const matchSubscription =
+      selectSubscription === "All" || p.subscription === selectSubscription;
+
+
+    return matchSearch && matchRole && matchStatus && matchSubscription;
+  });
+
+
 
   return (
     <>
@@ -161,7 +157,7 @@ export default function User() {
             </div>
             <p className="product">Total User</p>
             <div className="text">
-              <p>6,000</p>
+              <p>{totalUser}</p>
             </div>
           </div>
           <div className="pc">
@@ -170,7 +166,7 @@ export default function User() {
             </div>
             <p className="product">Active User</p>
             <div className="text">
-              <p>6,000</p>
+              <p>{activeUser}</p>
             </div>
           </div>
           <div className="pc">
@@ -179,7 +175,7 @@ export default function User() {
             </div>
             <p className="pro">New user</p>
             <div className="text">
-              <p>6,000</p>
+              <p>{newUser}</p>
             </div>
           </div>
           <div className="pc">
@@ -188,7 +184,7 @@ export default function User() {
             </div>
             <p className="pro">Growth Of User</p>
             <div className="text">
-              <p>13.5%</p>
+              <p>{growthOfUser}%</p>
             </div>
           </div>
         </div>
@@ -198,12 +194,17 @@ export default function User() {
           <input
             type="text"
             placeholder="Search User By Name..."
-            className="Search"
+            className="userSearch"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
           />
           <div className="selectContainer">
             <ChevronDown className="select-icon" />
-            <select className="select">
-              <option value="All Roles">All Roles</option>
+            <select
+              className="select"
+              onChange={(e) => setSelectRole(e.target.value)}
+            >
+              <option value="All">All Roles</option>
               <option value="Admin">Admin</option>
               <option value="Manager">Manager</option>
               <option value="Customer">Customer</option>
@@ -211,15 +212,30 @@ export default function User() {
           </div>
           <div className="selectContainer">
             <ChevronDown className="select-icon" />
-            <select className="select">
-              <option value="All Status">All Status</option>
+            <select
+              className="select"
+              onChange={(e) => setSelectStatus(e.target.value)}
+            >
+              <option value="All">All Status</option>
               <option value="Active">Active</option>
               <option value="InActive">InActive</option>
               <option value="Banned">Banned</option>
             </select>
           </div>
+          <div className="selectContainer">
+            <ChevronDown className="select-icon" />
+            <select
+              className="select"
+              onChange={(e) => setSelectSubscription(e.target.value)}
+            >
+              <option value="All">Subscription</option>
+              <option value="Premium"> Premium</option>
+              <option value="Free">Free</option>
+              <option value="Trial">Trial</option>
+            </select>
+          </div>
 
-          <button className="button">
+          <button className="button" onClick={exportToCSV}>
             <Download className="btn-icon" />
             Export CSV
           </button>
@@ -232,10 +248,7 @@ export default function User() {
                 <th className="User">User</th>
                 <th className="Role">Role</th>
                 <th className="Status">Status</th>
-                <th className="Subscription">
-                  Subscription
-                  <ArrowDownUp className="arrow" />
-                </th>
+                <th className="Subscription">Subscription</th>
                 <th className="Location"> Location</th>
                 <th className="Registered"> Registered</th>
                 <th className="Active">Last Active</th>
@@ -244,7 +257,7 @@ export default function User() {
               </tr>
             </thead>
             <tbody>
-              {database.map((data, index) => (
+              {filterdProducts.map((data, index) => (
                 <tr key={data.id}>
                   <td>
                     <div className="info">
@@ -311,22 +324,41 @@ export default function User() {
                   <td>
                     <div className="button-container">
                       <div className="edit-container">
-                        <button className="edit-button edt">
+                        <button
+                          className="edit-button edt"
+                          title="view details"
+                          onClick={() => {
+                            setSelectedUser(data);
+                            setShowModel(true);
+                          }}
+                        >
                           <Edit className="edt-btn" />
                         </button>
                       </div>
                       <div>
-                        <button className="msg-button message">
+                        <button
+                          className="msg-button message"
+                          title="send message"
+                          onClick={() => setShowEmail(true)}
+                        >
                           <MessageCircle className="edt-btn" />
                         </button>
                       </div>
                       <div>
-                        <button className="ban-button ban">
+                        <button
+                          className="ban-button ban"
+                          title="ban_user"
+                          onClick={() => handleBanUser(data.id)}
+                        >
                           <Ban className="edt-btn" />
                         </button>
                       </div>
                       <div>
-                        <button className="trash-button delete">
+                        <button
+                          className="trash-button delete"
+                          title="delete user"
+                          onClick={() => handleData(data.id)}
+                        >
                           <Trash className="edt-btn" />
                         </button>
                       </div>
@@ -338,6 +370,136 @@ export default function User() {
           </table>
         </div>
       </div>
+      {/*  */}
+      {showModel && selectedUser && (
+        <div className="model-overlay" onClick={() => setShowModel(false)}>
+          <div className="model-container" onClick={(e) => e.stopPropagation()}>
+            <div className="model-header">
+              <h2 className="modal-title">User Details</h2>
+              <button className="close-btn" onClick={() => setShowModel(false)}>
+                <X style={{ width: "1.5", height: "1.5" }} />
+              </button>
+            </div>
+            <div className="modal-body">
+              <div className="user-detail-grid">
+                <div className="detail-row">
+                  <span className="detail-label">Full Name</span>
+                  <span className="detail-value">{selectedUser.name}</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Email</span>
+                  <span className="detail-value">{selectedUser.email}</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Age</span>
+                  <span className="detail-value">{selectedUser.age}</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Gender</span>
+                  <span className="detail-value">{selectedUser.gender}</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Role</span>
+                  <span className="detail-value">{selectedUser.role}</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Location</span>
+                  <span className="detail-value">{selectedUser.location}</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Register</span>
+                  <span className="detail-value">
+                    {selectedUser.registered}
+                  </span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Status</span>
+                  <span className="detail-value">{selectedUser.status}</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Last Active</span>
+                  <span className="detail-value">
+                    {selectedUser.lastActive}
+                  </span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Age</span>
+                  <span className="detail-value">{selectedUser.age}</span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Verified</span>
+                  <span className="detail-value">
+                    {selectedUser.verified === true ? "Yes" : "No"}
+                  </span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Subscription</span>
+                  <span className="detail-value">
+                    {selectedUser.subscription}
+                  </span>
+                </div>
+                <div className="detail-row">
+                  <span className="detail-label">Total Spent</span>
+                  <span className="detail-value">
+                    {selectedUser.totalSpent}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showEmail && (
+        <div className="model-overlay" onClick={() => setShowEmail(false)}>
+          <div className="model-container" onClick={(e) => e.stopPropagation()}>
+            <form onSubmit={handleSubmit}>
+              <div className="modal-body">
+                <div className="email-header">
+                  <h2 className="modal-title">Email Section</h2>
+                  <button
+                    className="close-btn"
+                    onClick={() => setShowEmail(false)}
+                  >
+                    <X style={{ width: "1.5", height: "1.5" }} />
+                  </button>
+                </div>
+                <div className="user-detail-grid">
+                  <input
+                    type="text"
+                    name="from_name"
+                    placeholder="your name"
+                    className="detail-row"
+                    value={formData.from_name}
+                    onChange={handleChange}
+                  />
+                  <input
+                    type="email"
+                    placeholder="your email"
+                    name="from_email"
+                    className="detail-row"
+                    value={formData.from_email}
+                    onChange={handleChange}
+                  />
+                  <textarea
+                    cols="30"
+                    rows="10"
+                    name="message"
+                    value={formData.message}
+                    className="detail-row"
+                    onChange={handleChange}
+                  ></textarea>
+                  <div className="button-container">
+                    <button type="submit" className="detail-button">
+                      Send Email
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </>
   );
 }

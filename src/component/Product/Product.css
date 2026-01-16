@@ -1,0 +1,326 @@
+.product-container {
+    display: flex;
+    margin-top: -49.9rem;
+    margin-left: 20rem;
+    justify-content: space-evenly;
+    width: 99rem;
+    height: 10rem;
+  }
+  .pc1 {
+    display: grid;
+    justify-content: start;
+    align-content: center;
+    padding-left: 2rem;
+    width: 20rem;
+    height: 11.5rem;
+    max-height: 15rem;
+    border-radius: 14px;
+    background: rgba(30, 41, 59, 0.5);  /* more dark */ 
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
+    transition: all 0.3s ease;
+  
+  
+  }
+  .pc1:hover {
+    transform: translateY(-2px);
+  }
+  .icon {
+    margin-top: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .icon-available {
+    margin-top: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: #58729c;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon-trash {
+    margin-top: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: #e98120e5;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon-alert {
+    margin-top: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: #b9304e;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pro {
+    font-size: small;
+    font-weight: 500;
+    color: #94a3b8;
+    margin-top: 1.4rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .text {
+    color: rgb(223, 212, 212);
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: -2rem;
+  }
+  .pro-in {
+    display: flex;
+    justify-content: start;
+    gap: 0.5rem;
+    color: rgb(31, 167, 149);
+    margin-top: -2rem;
+    font-weight: 700;
+  }
+  
+  
+  .search-container {
+    width: 94.5rem;
+    height: 6rem;
+    margin-left: 22.2rem;
+    margin-top: 5rem;
+    background-color: white;
+    border-radius: 14px;
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    gap: 2rem;
+  }
+  
+  .search-button {
+    position: absolute;
+    left: 3.5rem;
+    top: 41%;
+    pointer-events: none;
+    color: #94a3b8;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  
+  .search {
+    width: 75rem;
+    height: 3rem;
+    background: rgba(51, 65, 85, 0.5);
+    color: white;
+    margin-left: 2.5rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 3rem;
+    gap: 1rem;
+    padding-left: 2.5rem;
+    border: 1px solid #475569;
+    font-size: 1rem;
+  }
+  .search:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+  .select-container {
+    position: relative;
+  }
+  .select {
+    width: 10rem;
+    height: 3.2rem;
+    background: rgba(51, 65, 85, 0.5);
+    color: white;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    border: 1px solid #475569;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  .select-icon {
+    position: absolute;
+    left: 7.8rem;
+    top: 28%;
+    pointer-events: none;
+    color: white;
+  }
+  select {
+    appearance: none;
+  }
+  
+  /* Table container */
+  
+  .tableContainer {
+    width: 100%;
+  }
+  .productTable {
+    margin-left: 22.2rem;
+    margin-top: 4rem;
+    border: 1px solid #334155;
+    width: 94.4rem;
+    color: white;
+    border-collapse: separate; /* Changed from collapse */
+    border-spacing: 0; /* Remove gaps between cells */
+    border-radius: 14px;
+    overflow: hidden;
+  }
+  
+  .productTable thead tr {
+    background: rgba(51, 65, 85, 0.5);
+  }
+  .productTable th {
+    white-space: nowrap;
+    text-align: left;
+    padding: 1rem 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: rgba(255, 255, 255, 0.719);
+  }
+  .productTable th.text-right {
+    text-align: center;
+    position: relative;
+  }
+  
+  .productTable th.text-category {
+    text-align: left;
+    padding-left: 3rem;
+  }
+  
+  .productTable th.text-center {
+    text-align: center;
+  }
+  
+  .productTable tbody tr {
+    border-top: 1px solid #334155;
+    text-align: left;
+  }
+  
+  .productTable tbody tr:hover {
+    transform: rgba(235, 237, 240, 0.3);
+  }
+  
+  .productTable td {
+    padding: 1rem 1.5rem;
+  }
+  
+  .productTable tbody td{
+    padding: 1rem 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    white-space: nowrap;
+    border-bottom: 1px solid #334155;
+  }
+  
+  
+  .productTable td.sales {
+    text-align: center;
+  }
+  
+  .stock {
+    text-align: center;
+  }
+  
+  .revenue {
+    text-align: center;
+  }
+  .trend {
+    text-align: center;
+  }
+  .index {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #60a5fa;
+    width: 2rem;
+    height: 2rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    border-radius: 50%;
+    background: rgba(59, 130, 246, 0.2);
+  }
+  
+  .category {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    height: 2rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    background: rgba(51, 65, 85, 0.5);
+    border-radius: 14px;
+    color: #cbd5e1;
+  }
+  
+  .data-stock.low {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 16px;
+    background: rgba(239, 68, 68, 0.2);
+    color: #f87171;
+  }
+  
+  .data-stock.high {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 16px;
+    background: rgba(16, 185, 129, 0.2);
+    color: #34d399;
+  }
+  
+  .data-trend.low{
+      color: #f87171;
+  }
+  
+  .data-trend.up{
+      color: #34d399;
+  }
+  
+  .arrow{
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 99rem;
+    margin-left: 23rem;
+    color: #94a3b8;
+    
+   
+  }

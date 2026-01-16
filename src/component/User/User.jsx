@@ -53,9 +53,9 @@ export default function User() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const serviceId = "service_qn8wb6d";
-    const templateId = "template_knu7h8c";
-    const publicKey = "wmfaLuIEnDJ9JEUP6";
+    const serviceId = "";
+    const templateId = "";
+    const publicKey = "";
 
     emailjs
       .send(serviceId, templateId, formData, publicKey)
